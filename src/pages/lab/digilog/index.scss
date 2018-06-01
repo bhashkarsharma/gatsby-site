@@ -1,0 +1,49 @@
+.digilog {
+    margin: 2vw auto;
+    max-width: 1140px;
+    
+    .face-box {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+.face {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    position: relative;
+
+    .node {
+        height: 3vw;
+        margin: 2vw;
+        position: relative;
+        width: 3vw;
+
+        .hand {
+            background: #000000;
+            border: 1px solid;
+            border-top-left-radius: 1vw;
+            border-bottom-left-radius: 1vw;
+            height: 1vw;
+            position: absolute;
+            transform-origin: 0.5vw;
+            transition-duration: 0.5s;
+            width: 4vw;
+
+            &.mask {
+                background: #CCCCCC;
+                border-bottom-left-radius: 0;
+                left: -0.7vw;
+                top: 0.7vw;
+                transform: rotateZ(135deg);
+                width: 3vw;
+                z-index: 2;
+            }
+        }
+
+        &:nth-child(2n) {
+            .hand.mask {
+                visibility: hidden;
+            }
+        }
+    }
+}

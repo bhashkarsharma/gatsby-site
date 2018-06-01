@@ -1,3 +1,5 @@
+import './index.scss'
+
 import Helmet from 'react-helmet'
 import Link from 'gatsby-link'
 import React from 'react'
@@ -6,7 +8,6 @@ const Lab = (props) => (
     <div>
         <Helmet>
             <title>Playground</title>
-            <meta name="description" content="My Playground" />
         </Helmet>
 
         <div id="main" className="alt">
@@ -15,10 +16,13 @@ const Lab = (props) => (
                     <header className="major">
                         <h1>Playground</h1>
                     </header>
-                    <div>
+                    <div className="links">
                         <div><Link to="/lab/voronoi">Voronoi</Link></div>
                         <div><Link to="/lab/particles">Particles</Link></div>
                         <div><Link to="/lab/helvetica">Helvetica</Link></div>
+                        <div><Link to="/lab/digilog">Digilog</Link></div>
+                        <div><Link to="/lab/segment">Segment</Link></div>
+                        <div><Link to="/lab/set">Set</Link></div>
                     </div>
                 </div>
             </section>

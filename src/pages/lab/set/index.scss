@@ -1,0 +1,342 @@
+.game-container {
+    margin: auto;
+    max-width: 700px;
+
+    .button {
+        border: 2px solid;
+        border-radius: 4px;
+        cursor: pointer;
+        display: inline-block;
+        font-size: 0.8em;
+        padding: 2px 4px;
+
+        &:hover {
+            color: grey;
+        }
+    }
+}
+
+.menu {
+    text-align: center;
+
+    div {
+        background: skyblue;
+        border: 2px solid;
+        border-radius: 5px;
+        box-shadow: 2px 2px 2px #CCC;
+        color: steelblue;
+        cursor: pointer;
+        margin: 10px auto;
+        padding: 10px;
+        width: 200px;
+        transition: all 0.2s;
+
+        &:hover {
+            background: yellowgreen;
+            box-shadow: 2px 2px 4px #DDD;
+            color: white;
+        }
+    }
+}
+
+.game {
+    .set {
+
+        .stats {
+            font-weight: bold;
+            margin: 0 5px;
+    
+            &>div {
+                display: inline-block;
+                font-size: 1.2em;
+                width: 33.33%;
+    
+                &:nth-child(1) {
+                    text-align: left;
+                }
+    
+                &:nth-child(2) {
+                    text-align: center;
+                }
+    
+                &:nth-child(3) {
+                    text-align: right;
+                }
+    
+                a {
+                    border: 1px solid;
+                    border-radius: 5px;
+                    display: inline-block;
+                    padding: 2px 4px;
+                }
+            }
+    
+            .gameTimer {
+                width: 100%;
+            }
+        }
+    
+        .playpen {
+            position: relative;
+    
+            .cardbox {
+                display: inline-block;
+                width: 33.33%;
+            }
+    
+            .notification {
+                $notif_opacity: 0.5;
+    
+                border-radius: 5px;
+                font-size: 3em;
+                font-weight: bold;
+                height: 100%;
+                padding-top: 115px;
+                position: absolute;
+                text-align: center;
+                width: 100%;
+                z-index: 2;
+    
+                &.type0 {
+                    background: rgba($color: white, $alpha: $notif_opacity);
+                    color: #333;
+                }
+    
+                &.type1 {
+                    background: rgba($color: lime, $alpha: $notif_opacity);
+                    color: #333;
+                }
+    
+                &.type2 {
+                    background: rgba($color: red, $alpha: $notif_opacity);
+                    color: white;
+                }
+            }
+    
+            .cards.blur {
+                filter: blur(3px);
+            }
+        }
+    
+        &.easy {
+    
+            .card {
+    
+                .icon {
+                    margin: 15px auto;
+                    zoom: 1.5;
+                }
+            }
+        }
+    
+        &.medium {
+    
+            .card {
+    
+                .icon {
+                    &:nth-child(1):nth-last-child(1) {
+                        margin: 25px auto;
+                    }
+            
+                    &:nth-child(1):nth-last-child(2),
+                    &:nth-child(2):nth-last-child(1) {
+                        margin: 10px auto;
+                    }
+    
+                    &:nth-child(1):nth-last-child(3),
+                    &:nth-child(2):nth-last-child(2),
+                    &:nth-child(3):nth-last-child(1) {
+                        margin: 5px auto;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.card {
+    --card-shadow: 0px 0px 4px 3px;
+
+    @keyframes zoominout {
+        0% {
+            transform: scale(1, 1);
+        }
+        50% {
+            transform: scale(1.05, 1.05);
+        }
+        100% {
+            transform: scale(1, 1);
+        }
+    }
+
+    @keyframes shake {
+        20% {
+            transform: translate3d(-3px, 0, 0);
+        }
+        80% {
+            transform: translate3d(3px, 0, 0);
+        }
+    }
+
+    @keyframes jiggle {
+        20% {
+            transform: rotate(-1deg);
+        }
+        80% {
+            transform: rotate(1deg);
+        }
+    }
+
+    .inner {
+        background-color: white;
+        border: 1px solid #333;
+        border-radius: 5px;
+        height: 100px;
+        margin: 5px;
+        overflow: hidden;
+        padding: 10px;
+        text-align: center;
+        transition: all .2s ease-in-out;
+
+        &.red {
+            color: #E74C3C;
+        }
+    
+        &.green {
+            color: #27AE60;
+        }
+    
+        &.blue {
+            color: #2980B9;
+        }
+
+        &.clicked {
+            box-shadow: var(--card-shadow) #555;
+        }
+        
+        &.error {
+            animation: shake 0.5s infinite;
+            box-shadow: var(--card-shadow) #ff2f00;
+        }
+        
+        &.hint {
+            animation: jiggle 0.5s infinite;
+            box-shadow: var(--card-shadow) #0077ff;
+        }
+
+        &.success {
+            animation: zoominout 1s infinite;
+            box-shadow: var(--card-shadow) #00ff00;
+            filter: blur(2px);
+        }
+
+        div {
+            &:nth-child(1):nth-last-child(1) {
+                margin: 30px auto;
+            }
+    
+            &:nth-child(1):nth-last-child(2),
+            &:nth-child(2):nth-last-child(1) {
+                margin: 10px auto;
+            }
+
+            .fa-stack {
+                font-size: 14px;
+            }
+        }
+    }
+
+    .icon {
+        margin: auto;
+    }
+}
+
+.instructions {
+    h2 {
+        text-align: center;
+    }
+    
+    button {
+        display: block;
+        margin: auto;
+    }
+    
+    .demo {
+        .desc {
+            border: none;
+            display: block;
+            font-family: serif;
+            font-style: italic;
+            font-weight: normal;
+        }
+    }
+    
+    .text {
+        color: #999;
+        font-style: italic;
+        margin: 10px 0;
+        padding: 10px;
+    
+        table {
+            border: 1px solid;
+            width: 100%;
+    
+            th, td {
+                border-top: 1px solid;
+                padding: 5px;
+                text-align: center;
+            }
+        }
+    }
+}
+
+.leaderboard {
+    animation: rainbow 18s ease infinite;
+    background: linear-gradient(90deg, #ff2400, #e81d1d, #e8b71d, #e3e81d,
+                #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
+    background-size: 1800% 1800%;
+    padding: 20px;
+    text-align: center;
+
+    .scoreForm {
+        margin: 10px 0;
+
+        input {
+            color: #333;
+            line-height: 1.5em;
+            padding: 5px;
+        }
+
+        button {
+            font-size: 1em;
+            padding: 10px 15px;
+        }
+
+    }
+    
+    .scoreboard {
+        border: 1px solid;
+        width: 100%;
+
+        thead {
+            border-bottom: 1px solid;
+        }
+        
+        th, td {
+            padding: 5px;
+            text-align: center;
+        }
+    }
+
+    @keyframes rainbow { 
+        0% {
+            background-position: 0% 82%;
+        }
+        50% {
+            background-position:100% 19%;
+        }
+        100% {
+            background-position:0% 82%;
+        }
+    }
+}

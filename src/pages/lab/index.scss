@@ -1,0 +1,20 @@
+.links {
+    div {
+        font-size: 2em;
+        margin: 0.5em 0;
+        text-align: center;
+
+        &:nth-child(odd) {
+            &:before {
+                content: '\000BB';
+                margin: 10px;
+            }
+        }
+        &:nth-child(even) {
+            &:after {
+                content: '\000AB';
+                margin: 10px;
+            }
+        }
+    }
+}
