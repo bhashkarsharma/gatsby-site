@@ -19,8 +19,9 @@ const Blog = (props) => (
                         props.data.allMarkdownRemark.edges.map((edge, key) => {
                             return <div key={key}>
                                 <Link to={edge.node.frontmatter.path}>
-                                    {edge.node.frontmatter.title} // {edge.node.frontmatter.date}
+                                    <span style={{ fontSize: '1.5em' }}>{edge.node.frontmatter.title}</span>
                                 </Link>
+                                <span style={{ fontStyle: 'italic', marginLeft: '10px' }}>{edge.node.frontmatter.date}</span>
                             </div>
                         })
                     }

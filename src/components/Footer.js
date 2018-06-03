@@ -11,7 +11,7 @@ const Footer = (props) => (
                 <li><a href="mailto:info@bhashkar.me" className="icon alt fa-envelope"><span className="label">Email</span></a></li>
             </ul>
             <ul className="copyright">
-                <li>&copy; Bhashkar Sharma</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+                <li>&copy; Bhashkar Sharma</li>
             </ul>
         </div>
     </footer>
