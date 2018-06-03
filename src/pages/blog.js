@@ -17,7 +17,6 @@ const Blog = (props) => (
                     </header>
                     {
                         props.data.allMarkdownRemark.edges.map((edge, key) => {
-                            console.log(key, edge);
                             return <div key={key}>
                                 <Link to={edge.node.frontmatter.path}>
                                     {edge.node.frontmatter.title} // {edge.node.frontmatter.date}
