@@ -1,0 +1,16 @@
+.configurator {
+    text-align: center;
+
+    label {
+        display: inline-block;
+        font-weight: normal;
+
+        &.chosen {
+            font-weight: bold;
+        }
+    }
+
+    .fa {
+        margin: 0 10px;
+    }
+}

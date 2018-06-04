@@ -178,46 +178,46 @@ export default class Particles extends React.Component {
                             ref={can => { if (can !== null) this.canvas = can }}
                             style={{ border: '1px solid' }}>
                         </canvas>
-                        <div>
+                        <div className="configurator">
                             <div>
-                                <span className="label">Count</span>
-                                <input type="range"
-                                    min="1"
-                                    max="100"
-                                    step="1"
-                                    value={this.state.count}
-                                    onChange={this.updateCount} />
-                                <span className="value">{this.state.count}</span>
-                            </div>
-                            <div>
-                                <span className="label">Max connection length</span>
-                                <input type="range"
-                                    min="1"
-                                    max="1000"
-                                    step="1"
-                                    value={this.state.maxdist}
-                                    onChange={this.updateMaxdist} />
-                                <span className="value">{this.state.maxdist}</span>
-                            </div>
-                            <div>
-                                <span className="label">Size</span>
+                                <label>Size</label>
                                 <input type="range"
                                     min="1"
                                     max="50"
                                     step="1"
                                     value={this.state.size}
                                     onChange={this.updateSize} />
-                                <span className="value">{this.state.size}</span>
+                                <label>{this.state.size}</label>
                             </div>
                             <div>
-                                <span className="label">Speed</span>
+                                <label>Speed</label>
                                 <input type="range"
                                     min="1"
                                     max="50"
                                     step="1"
                                     value={this.state.speed}
                                     onChange={this.updateSpeed} />
-                                <span className="value">{this.state.speed}</span>
+                                <label>{this.state.speed}</label>
+                            </div>
+                            <div>
+                                <label>Count</label>
+                                <input type="range"
+                                    min="1"
+                                    max="100"
+                                    step="1"
+                                    value={this.state.count}
+                                    onChange={this.updateCount} />
+                                <label>{this.state.count}</label>
+                            </div>
+                            <div>
+                                <label>Connection max length</label>
+                                <input type="range"
+                                    min="1"
+                                    max="1000"
+                                    step="1"
+                                    value={this.state.maxdist}
+                                    onChange={this.updateMaxdist} />
+                                <label>{this.state.maxdist}</label>
                             </div>
                         </div>
                     </div>

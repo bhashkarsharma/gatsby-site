@@ -126,7 +126,7 @@ export default class Helvetica extends React.Component {
                 <div id="main" className="alt">
                     <div className="inner">
                         <header className="major">
-                            <h1>Particles</h1>
+                            <h1>Helvetica</h1>
                         </header>
                         <div style={{ margin: '5vw auto' }}>
                             {

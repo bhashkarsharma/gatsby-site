@@ -170,11 +170,10 @@ export default class Voronoi extends React.Component {
                             onClick={this.canvasClick}>
                         </canvas>
                         <div>{this.state.stats}</div>
-                        <div>
-                            <label className={`sans-serif ${this.state.random ? 'chosen' : ''}`} onClick={this.switchMode.bind(this, true)}>Random</label>
-                            {this.state.random && <div className="fa-holder"><i className="fa fa-toggle-off"></i></div>}
-                            {!this.state.random && <div className="fa-holder"><i className="fa fa-toggle-on"></i></div>}
-                            <label className={`sans-serif ${!this.state.random ? 'chosen' : ''}`} onClick={this.switchMode.bind(this, false)}>Plotted</label>
+                        <div className="configurator">
+                            <label className={`${this.state.random ? 'chosen' : ''}`} onClick={this.switchMode.bind(this, true)}>Random</label>
+                            {this.state.random ? <i className="fa fa-toggle-off"></i> : <i className="fa fa-toggle-on"></i>}
+                            <label className={`${this.state.random ? '' : 'chosen'}`} onClick={this.switchMode.bind(this, false)}>Plotted</label>
                             {this.state.random ?
                                 <div>
                                     <input type="range"
@@ -186,7 +185,7 @@ export default class Voronoi extends React.Component {
                                 </div> :
                                 <div>Click in the box to plot points.</div>
                             }
-                            <div>Consult <a href="https://en.wikipedia.org/wiki/Voronoi_diagram">Wikipedia</a> for more information.</div>
+                            <div>Consult <a target="_blank" rel="noopener noreferrer" href="https://en.wikipedia.org/wiki/Voronoi_diagram">Wikipedia</a> for more information.</div>
                         </div>
                     </div>
                 </div>

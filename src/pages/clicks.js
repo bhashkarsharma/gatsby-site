@@ -34,18 +34,18 @@ const Clicks = (props) => (
                 <section>
                     <div className="box alt">
                         <div className="row 50% uniform">
-                            <div className="4u"><span className="image fit"><img src={pic01} alt="" /></span></div>
-                            <div className="4u"><span className="image fit"><img src={pic02} alt="" /></span></div>
-                            <div className="4u"><span className="image fit"><img src={pic03} alt="" /></span></div>
-                            <div className="4u"><span className="image fit"><img src={pic04} alt="" /></span></div>
-                            <div className="4u"><span className="image fit"><img src={pic05} alt="" /></span></div>
-                            <div className="4u"><span className="image fit"><img src={pic06} alt="" /></span></div>
-                            <div className="4u"><span className="image fit"><img src={pic08} alt="" /></span></div>
-                            <div className="4u"><span className="image fit"><img src={pic09} alt="" /></span></div>
-                            <div className="4u"><span className="image fit"><img src={pic10} alt="" /></span></div>
-                            <div className="4u"><span className="image fit"><img src={pic11} alt="" /></span></div>
-                            <div className="4u"><span className="image fit"><img src={pic12} alt="" /></span></div>
-                            <div className="4u"><span className="image fit"><img src={pic19} alt="" /></span></div>
+                            <div className="4u 12u(medium)"><span className="image fit"><img src={pic01} alt="" /></span></div>
+                            <div className="4u 12u(medium)"><span className="image fit"><img src={pic02} alt="" /></span></div>
+                            <div className="4u 12u(medium)"><span className="image fit"><img src={pic03} alt="" /></span></div>
+                            <div className="4u 12u(medium)"><span className="image fit"><img src={pic04} alt="" /></span></div>
+                            <div className="4u 12u(medium)"><span className="image fit"><img src={pic05} alt="" /></span></div>
+                            <div className="4u 12u(medium)"><span className="image fit"><img src={pic06} alt="" /></span></div>
+                            <div className="4u 12u(medium)"><span className="image fit"><img src={pic08} alt="" /></span></div>
+                            <div className="4u 12u(medium)"><span className="image fit"><img src={pic09} alt="" /></span></div>
+                            <div className="4u 12u(medium)"><span className="image fit"><img src={pic10} alt="" /></span></div>
+                            <div className="4u 12u(medium)"><span className="image fit"><img src={pic11} alt="" /></span></div>
+                            <div className="4u 12u(medium)"><span className="image fit"><img src={pic12} alt="" /></span></div>
+                            <div className="4u 12u(medium)"><span className="image fit"><img src={pic19} alt="" /></span></div>
                         </div>
                     </div>
                 </section>
