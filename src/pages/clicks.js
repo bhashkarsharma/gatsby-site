@@ -2,6 +2,7 @@ import BannerLanding from '../components/BannerLanding'
 import Helmet from 'react-helmet'
 import Link from 'gatsby-link'
 import React from 'react'
+import camera from '../assets/images/camera.jpg'
 import pic01 from '../assets/images/clicks/pic01.jpg'
 import pic02 from '../assets/images/clicks/pic02.jpg'
 import pic03 from '../assets/images/clicks/pic03.jpg'
@@ -23,15 +24,10 @@ const Clicks = (props) => (
             <meta name="description" content="Photos I click" />
         </Helmet>
 
+        <BannerLanding accent="style3" heading="Clicks" byline="Photos I click" background={camera} />
+
         <div id="main" className="alt">
             <section id="one">
-                <div className="inner">
-                    <header className="major">
-                        <h1>Clicks</h1>
-                    </header>
-                </div>
-            </section>
-            <section id="two">
                 <section>
                     <div className="box alt">
                         <div className="row 50% uniform">

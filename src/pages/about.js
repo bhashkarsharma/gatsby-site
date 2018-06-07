@@ -1,6 +1,8 @@
+import BannerLanding from '../components/BannerLanding'
 import Helmet from 'react-helmet'
 import Link from 'gatsby-link'
 import React from 'react'
+import about from '../assets/images/about.jpg'
 
 const About = (props) => (
     <div>
@@ -9,12 +11,11 @@ const About = (props) => (
             <meta name="description" content="About Page" />
         </Helmet>
 
+        <BannerLanding accent="style4" heading="About" byline="What I do" background={about} />
+
         <div id="main" className="alt">
             <section id="one">
                 <div className="inner">
-                    <header className="major">
-                        <h1>About</h1>
-                    </header>
                     <div>I am a web developer with 8+ years of experience.</div>
                     <div>Originally from India, presently working in Germany.</div>
                     <div>I am passionate about the open web and great user experiences.</div>

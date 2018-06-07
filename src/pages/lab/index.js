@@ -1,8 +1,10 @@
 import './index.scss'
 
+import BannerLanding from '../../components/BannerLanding'
 import Helmet from 'react-helmet'
 import Link from 'gatsby-link'
 import React from 'react'
+import lab from '../../assets/images/lab.jpg'
 
 const Lab = (props) => (
     <div>
@@ -10,12 +12,11 @@ const Lab = (props) => (
             <title>Playground</title>
         </Helmet>
 
+        <BannerLanding accent="style1" heading="Playground" byline="Fun with code" background={lab} />
+
         <div id="main" className="alt">
             <section id="one">
                 <div className="inner">
-                    <header className="major">
-                        <h1>Playground</h1>
-                    </header>
                     <div className="links">
                         <div><Link to="/lab/voronoi">Voronoi</Link></div>
                         <div><Link to="/lab/particles">Particles</Link></div>

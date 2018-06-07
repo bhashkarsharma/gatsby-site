@@ -1,6 +1,8 @@
+import BannerLanding from '../components/BannerLanding'
 import Helmet from 'react-helmet'
 import Link from 'gatsby-link'
 import React from 'react'
+import blog from '../assets/images/blog.jpg'
 
 const Blog = (props) => (
     <div>
@@ -9,12 +11,11 @@ const Blog = (props) => (
             <meta name="description" content="Blog Posts" />
         </Helmet>
 
+        <BannerLanding accent="style2" heading="Posts" byline="Stuff I write" background={blog} />
+
         <div id="main" className="alt">
             <section id="one">
                 <div className="inner">
-                    <header className="major">
-                        <h1>Posts</h1>
-                    </header>
                     {
                         props.data.allMarkdownRemark.edges.map((edge, key) => {
                             return <div key={key}>
