@@ -6,3 +6,4 @@ public
 .cache/
 src/posts/
 yarn.lock
+src/assets/images/pic*
