@@ -23,6 +23,13 @@ class HomeIndex extends React.Component {
 
                 <div id="main">
                     <section id="one" className="tiles">
+                        <article style={{ backgroundImage: `url(${lab})` }}>
+                            <header className="major">
+                                <h3>Playground</h3>
+                                <p>Fun with code</p>
+                            </header>
+                            <Link to="/lab" className="link primary"></Link>
+                        </article>
                         <article style={{ backgroundImage: `url(${blog})` }}>
                             <header className="major">
                                 <h3>Posts</h3>
@@ -36,13 +43,6 @@ class HomeIndex extends React.Component {
                                 <p>Photos I click</p>
                             </header>
                             <Link to="/clicks" className="link primary"></Link>
-                        </article>
-                        <article style={{ backgroundImage: `url(${lab})` }}>
-                            <header className="major">
-                                <h3>Playground</h3>
-                                <p>Fun with code</p>
-                            </header>
-                            <Link to="/lab" className="link primary"></Link>
                         </article>
                         <article style={{ backgroundImage: `url(${about})` }}>
                             <header className="major">

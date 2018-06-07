@@ -20,9 +20,10 @@ const Clicks = (props) => (
     <div>
         <Helmet>
             <title>Clicks</title>
+            <meta name="description" content="Photos I click" />
         </Helmet>
 
-        <div id="main">
+        <div id="main" className="alt">
             <section id="one">
                 <div className="inner">
                     <header className="major">
@@ -30,7 +31,7 @@ const Clicks = (props) => (
                     </header>
                 </div>
             </section>
-            <section id="two" className="spotlights">
+            <section id="two">
                 <section>
                     <div className="box alt">
                         <div className="row 50% uniform">

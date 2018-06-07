@@ -28,7 +28,6 @@ const Blog = (props) => (
                 </div>
             </section>
         </div>
-
     </div>
 )
 
